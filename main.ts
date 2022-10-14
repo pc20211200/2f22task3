@@ -1,16 +1,55 @@
+let uwu = 0
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(1)
-    basic.pause(1000)
-    basic.showNumber(2)
-    basic.pause(1000)
-    basic.showNumber(3)
-    basic.pause(1000)
-    basic.showNumber(4)
-    basic.pause(1000)
-    basic.showNumber(5)
-    basic.pause(1000)
-    basic.showNumber(6)
-    basic.pause(1000)
+    uwu += -10
+})
+input.onButtonPressed(Button.B, function () {
+    uwu = 5
+    while (uwu >= 0) {
+        basic.showNumber(uwu)
+        uwu += -1
+    }
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . # . # .
+        . . # . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . . . #
+        . # . # .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . # . # .
+        # . . . #
+        . . . . .
+        # . . . #
+        . # . # .
+        `)
+    basic.showLeds(`
+        # . . . #
+        . . . . .
+        . . . . .
+        . . . . .
+        # . . . #
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 })
 basic.forever(function () {
 	
